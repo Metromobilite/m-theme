@@ -1,0 +1,128 @@
+@import "../variables";
+@import "../helpers";
+
+/*******************************************************************************************
+ * Override the material design list style.
+ *
+ * The "m-theme" class is required on the mat-list component to use the right theme.
+ * Available classes on mat-list/mat-action-list/ect...:
+ *   - flat => remove the box shadow on each expansion panels.
+ *   - important => add border radius and more spacing on each list items.
+ *   - no-background => remove the list wrapper background.
+ *   - no-padding => remove the list wrapper padding.
+ *
+ * Available classes on mat-list-item:
+ *   - double-action => Suitable for mat-list-item containing a link and an action button.
+ *                      In this case, the original padding is applied to the link element.
+ *   - no-padding => Remove the mat-list-item-content padding.
+ *
+ ********************************************************************************************/
+
+.mat-list-base.m-theme {
+	padding: $list-spacing;
+
+	.dark-theme & {
+		background-color: dark-color-overlay(2);
+	}
+
+	.mat-list-item {
+		@include mat-elevation(1);
+
+		overflow: hidden;
+		border: 1px solid transparent;
+		transition: border 250ms;
+
+		&:not(:last-of-type) {
+			margin-bottom: $list-spacing / 4;
+		}
+
+		&:focus,
+		&:hover {
+			background: transparent !important;
+		}
+
+		&:focus {
+			.dark-theme & {
+				border: 1px solid mat-color($dark-primary);
+			}
+			.light-theme & {
+				border: 1px solid mat-color($light-primary);
+			}
+		}
+
+		.mat-list-item-content {
+			.mat-list-text {
+				height: 100%;
+				justify-content: center;
+			}
+
+			.dark-theme & {
+				background-color: dark-color-overlay(8);
+			}
+
+			.mat-list-icon {
+				height: $list-icon-size;
+				width: $list-icon-size;
+				line-height: $list-icon-size;
+				font-size: $list-icon-size;
+			}
+		}
+
+		.mat-line:not(:first-of-type) {
+			font-size: 12px;
+			opacity: 0.7;
+			margin-top: $list-spacing / 2;
+		}
+
+		&.double-action {
+			position: relative;
+
+			.mat-line[mat-ripple] {
+				position: relative;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			a.mat-line {
+				padding: 0 $list-spacing * 2;
+			}
+
+			button,
+			a[mat-icon-button] {
+				position: absolute;
+				top: 50%;
+				right: $list-spacing * 2;
+				transform: translate(0, -50%);
+			}
+		}
+	}
+
+	&.flat {
+		.mat-list-item {
+			box-shadow: none;
+		}
+	}
+
+	&.important {
+		.mat-list-item {
+			border-radius: $shape-radius;
+
+			&:not(:last-of-type) {
+				margin-bottom: $list-spacing;
+			}
+		}
+	}
+
+	&.no-background {
+		.dark-theme & {
+			background-color: transparent;
+		}
+	}
+
+	&.no-padding,
+	.mat-list-item.no-padding .mat-list-item-content {
+		padding: 0;
+	}
+}

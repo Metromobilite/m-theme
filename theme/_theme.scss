@@ -1,0 +1,17 @@
+@import "./variables";
+
+@include mat-core();
+
+body {
+	&.light-theme {
+		@include angular-material-theme($light-theme);
+
+		background: #fff;
+	}
+	&.dark-theme {
+		@include angular-material-theme($dark-theme);
+
+		background: #16111a;
+		color: #fff;
+	}
+}

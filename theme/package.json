@@ -1,0 +1,25 @@
+{
+  "name": "@metromobilite/m-theme",
+  "version": "1.0.0",
+  "description": "A theme based on the angular material package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Metromobilite/m-theme.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "theme",
+    "metromobilite"
+  ],
+  "author": "Metromobilite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Metromobilite/m-theme/issues"
+  },
+  "homepage": "https://github.com/Metromobilite/m-theme#readme"
+}

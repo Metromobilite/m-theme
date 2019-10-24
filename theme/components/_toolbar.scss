@@ -1,0 +1,67 @@
+@import "../variables";
+@import "../helpers";
+
+/********************************************************************************
+ * Override the material design toolbar style.
+ * Also provides m-toolbar and m-toolbar-row for slightly styled toolbar.
+ * If the m-toolbar-row is used, make sure to add the multiline class on the
+ * m-toolbar wrapper.
+ *
+ * Available classes on mat-toolbar-row and m-toolbar-row:
+ *   - align-end => Align children to the bottom of the row.
+ *   - no-padding => remove the row padding.
+ *
+ ********************************************************************************/
+
+.m-toolbar {
+	display: flex;
+	box-sizing: border-box;
+	padding: 0 16px;
+	width: 100%;
+
+	&.multiline {
+		flex-direction: column;
+	}
+
+	&:not(.multiline) {
+		flex-direction: row;
+		align-items: center;
+		white-space: nowrap;
+	}
+
+	.m-toolbar-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		white-space: nowrap;
+	}
+}
+
+.mat-toolbar,
+.m-toolbar {
+	body.dark-theme & {
+		position: relative;
+		background: map-get($dark-theme-background, app-bar);
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: dark-color-overlay(12);
+			z-index: -1;
+		}
+	}
+
+	.mat-toolbar-row,
+	.m-toolbar-row {
+		&.align-end {
+			align-items: flex-end;
+		}
+		&.no-padding {
+			padding: 0;
+		}
+	}
+}

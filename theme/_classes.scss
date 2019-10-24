@@ -1,0 +1,30 @@
+@import "./helpers";
+
+/********************************************************************************
+ * Define some helper classes.
+ ********************************************************************************/
+
+/**
+  * Used to display multiple line (in column) and define a smaller
+  * font-size on non first of type items.
+  */
+.m-multiline {
+	display: flex;
+	flex-direction: column;
+
+	> * {
+		&:not(:first-of-type) {
+			font-size: 12px;
+			opacity: 0.7;
+		}
+	}
+}
+
+/**
+ * Helper class to add background dark behavior according to the elevation values.
+ */
+@each $elevation, $value in $dark-theme-elevation-colors {
+	.dark-overlay-#{$elevation} {
+		background: dark-color-overlay($elevation);
+	}
+}

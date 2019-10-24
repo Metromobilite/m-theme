@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-dialog-container {
+	body.dark-theme & {
+		background: map-get($dark-theme-background, container);
+	}
+}
+
+.cdk-overlay-dark-backdrop {
+	body.dark-theme & {
+		background: rgba(black, 0.7);
+	}
+}
+
+.mat-dialog-actions {
+	&.align-right {
+		justify-content: flex-end;
+	}
+}

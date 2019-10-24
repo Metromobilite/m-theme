@@ -1,0 +1,18 @@
+<mat-toolbar style="position: fixed; top: 0; left: 0; z-index: 1;">
+  <mat-toolbar-row>
+    <h1 style="flex: 1;">M Theme</h1>
+    <mat-button-toggle-group (change)="onThemeSwitchChange($event)" name="themeToggle" aria-label="Theme Toggle">
+      <mat-button-toggle value="dark-theme" [checked]="true">Dark</mat-button-toggle>
+      <mat-button-toggle value="light-theme">Light</mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="align-end no-padding">
+    <nav mat-tab-nav-bar mat-stretch-tabs style="width: 100%;">
+      <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+        {{ link.label }}</a>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div style="margin-top: 180px;"></div>
+<router-outlet></router-outlet>
+<div style="height: 100px;"></div>

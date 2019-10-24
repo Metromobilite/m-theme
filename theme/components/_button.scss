@@ -1,0 +1,36 @@
+@import "../variables";
+
+/********************************************************************************
+ * Override the material design button style.
+ ********************************************************************************/
+
+.mat-button-base {
+	text-transform: uppercase;
+
+	body.dark-theme & {
+		color: map-get($dark-theme-foreground, text);
+	}
+
+	&.mat-button,
+	&.mat-flat-button,
+	&.mat-stroked-button,
+	&.mat-raised-button {
+		border-radius: $button-radius;
+	}
+
+	&.mat-stroked-button {
+		.dark-theme & {
+			@include _mat-button-theme-property($dark-theme, "border-color", text);
+		}
+		.light-theme & {
+			@include _mat-button-theme-property($light-theme, "border-color", text);
+		}
+	}
+
+	.mat-icon.right {
+		margin-right: $button-icon-spacing;
+	}
+	.mat-icon.left {
+		margin-left: $button-icon-spacing;
+	}
+}
