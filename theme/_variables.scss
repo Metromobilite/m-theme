@@ -94,6 +94,10 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 $spacing: 8px;
 $shape-radius: 8px;
 $button-radius: 16px;
-$list-spacing: $spacing;
 $button-icon-spacing: $spacing;
+
+/**** list ****/
+$list-spacing: $spacing;
 $list-icon-size: 24px;
+$list-item-fz: 14px;
+$list-item-fz-secondary: 12px;

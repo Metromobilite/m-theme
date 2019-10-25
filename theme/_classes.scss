@@ -1,3 +1,4 @@
+@import "./variables";
 @import "./helpers";
 
 /********************************************************************************
@@ -11,20 +12,52 @@
 .m-multiline {
 	display: flex;
 	flex-direction: column;
+	font-size: $list-item-fz;
 
 	> * {
 		&:not(:first-of-type) {
-			font-size: 12px;
+			font-size: $list-item-fz-secondary;
 			opacity: 0.7;
 		}
 	}
 }
 
 /**
- * Helper class to add background dark behavior according to the elevation values.
+ * Helper classes to add background dark behavior according to the elevation values.
  */
 @each $elevation, $value in $dark-theme-elevation-colors {
 	.dark-overlay-#{$elevation} {
 		background: dark-color-overlay($elevation);
 	}
+}
+
+/**
+ * Helper classes to build flex layout.
+ */
+.layout {
+	display: flex;
+
+	&.column {
+		flex-direction: column;
+	}
+}
+
+/**
+ * Helper classes for icons.
+ */
+.icon-left {
+	margin-right: $list-spacing;
+}
+.icon-right {
+	margin-left: $list-spacing;
+}
+
+/**
+ * Helper classes for text.
+ */
+.ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
 }
