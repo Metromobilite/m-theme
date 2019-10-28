@@ -61,3 +61,11 @@
 	overflow: hidden;
 	display: block;
 }
+
+/**
+ * Helper class to add a background image on bottom of a scrollable container.
+ * TODO
+ */
+.end-with-bg {
+	padding-bottom: $end-bg-size;
+}
