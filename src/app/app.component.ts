@@ -1,5 +1,6 @@
 import { Component, Renderer2, } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,10 @@ export class AppComponent {
     { path: '/bottom-sheet', label: 'Bottom Sheet' },
   ];
 
-  constructor(private renderer: Renderer2) { }
+  constructor(
+    private renderer: Renderer2,
+    private snackBar: MatSnackBar
+  ) { }
 
   onThemeSwitchChange(change: MatButtonToggleChange) {
     if (document.body.classList.contains('dark-theme') && change.value === 'light-theme') {
@@ -26,5 +30,9 @@ export class AppComponent {
       this.renderer.removeClass(document.body, 'light-theme');
       this.renderer.addClass(document.body, 'dark-theme');
     }
+  }
+
+  openSnackBar() {
+    this.snackBar.open('Message in snack-bar', 'Action');
   }
 }

@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-snack-bar-container {
+	body.dark-theme &,
+	body.light-theme & {
+		background: $snack-bar-bg;
+		color: map-get($dark-theme-foreground, text);
+
+		.mat-button-base {
+			color: map-get($dark-primary, default);
+		}
+	}
+}

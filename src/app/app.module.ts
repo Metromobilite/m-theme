@@ -11,6 +11,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatRippleModule } from '@angular/material/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +50,9 @@ import { DemoBottomSheetComponent } from './demo-bottom-sheet/demo-bottom-sheet.
     MatDialogModule,
     MatBottomSheetModule,
     MatRippleModule,
+    MatSidenavModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
