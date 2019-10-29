@@ -29,8 +29,6 @@
 		@include mat-elevation(1);
 
 		overflow: hidden;
-		border: 1px solid transparent;
-		transition: border 250ms;
 		font-size: $list-item-fz;
 		line-height: $list-item-fz;
 		font-weight: 200;
@@ -44,7 +42,16 @@
 			background: transparent !important;
 		}
 
-		&:focus {
+		&,
+		a {
+			border: 1px solid transparent;
+			transition: border 250ms;
+		}
+
+		&:focus,
+		a:focus {
+			outline: none;
+
 			.dark-theme & {
 				border: 1px solid mat-color($dark-primary);
 			}
@@ -112,7 +119,10 @@
 
 	&.important {
 		.mat-list-item {
-			border-radius: $shape-radius;
+			&,
+			a {
+				border-radius: $shape-radius;
+			}
 
 			&:not(:last-of-type) {
 				margin-bottom: $list-spacing;
