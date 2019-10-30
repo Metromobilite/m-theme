@@ -39,10 +39,11 @@
 
 .mat-toolbar,
 .m-toolbar {
+	position: relative;
+	z-index: 1;
+
 	body.dark-theme & {
-		position: relative;
 		background: map-get($dark-theme-background, app-bar);
-		z-index: 1;
 
 		&::before {
 			content: "";
