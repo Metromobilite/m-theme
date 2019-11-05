@@ -27,5 +27,27 @@
     <div style="margin-top: 180px;"></div>
     <router-outlet></router-outlet>
     <div style="height: 100px;"></div>
+    <div class="m-toolbar main-navigation">
+      <a routerLink="/button" routerLinkActive="active" mat-ripple>
+        <mat-icon aria-hidden="true">picture_in_picture</mat-icon>
+        <span>Button</span>
+      </a>
+      <a routerLink="/list" routerLinkActive="active" mat-ripple>
+        <mat-icon aria-hidden="true">view_list</mat-icon>
+        <span>List</span>
+      </a>
+      <a routerLink="/expansion-panel" routerLinkActive="active" mat-ripple>
+        <mat-icon aria-hidden="true">view_agenda</mat-icon>
+        <span>Panel</span>
+      </a>
+      <a routerLink="/dialog" routerLinkActive="active" mat-ripple>
+        <mat-icon aria-hidden="true">pets</mat-icon>
+        <span>Dialog</span>
+      </a>
+      <a routerLink="/bottom-sheet" routerLinkActive="active" mat-ripple>
+        <mat-icon aria-hidden="true">credit_card</mat-icon>
+        <span>Bottom sheet</span>
+      </a>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

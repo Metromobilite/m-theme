@@ -26,7 +26,7 @@ $dark-theme-elevation-colors: (
 }
 
 @mixin full-height() {
-	height: calc(100vh - #{$mpwa-toolbar-main-navigation-height});
+	height: calc(100vh - #{$toolbar-main-nav-height});
 }
 
 @mixin simple-page() {
@@ -40,10 +40,10 @@ $dark-theme-elevation-colors: (
 	align-self: flex-start;
 
 	body.dark-theme & {
-		background: map-get($mpwa-dark-background, container);
+		background: map-get($dark-theme-background, container);
 	}
 	body.light-theme & {
-		background: map-get($mpwa-light-background, container);
+		background: map-get($light-theme-background, container);
 	}
 
 	.m-toolbar {
@@ -53,9 +53,9 @@ $dark-theme-elevation-colors: (
 
 @mixin drop-shadow() {
 	body.dark-theme & {
-		box-shadow: $mpwa-dark-box-shadow;
+		box-shadow: $dark-box-shadow;
 	}
 	body.light-theme & {
-		box-shadow: $mpwa-light-box-shadow;
+		box-shadow: $light-box-shadow;
 	}
 }

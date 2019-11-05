@@ -117,3 +117,7 @@ $default-fz: 14px;
 $default-fz-big: 18px;
 $header-fz: $default-fz + 2px;
 $header-fz-big: $header-fz + 4px;
+
+/**** shadow ****/
+$light-box-shadow: 0 4px 8px rgba(black, 0.5);
+$dark-box-shadow: 0 4px 8px rgba(black, 0.7);

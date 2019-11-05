@@ -103,14 +103,14 @@
 			}
 
 			.dark-theme & {
-				color: map-get($dark-foreground, text);
+				color: map-get($dark-theme-foreground, text);
 
 				&.active {
 					color: map-get($dark-accent, default);
 				}
 			}
 			.light-theme & {
-				color: map-get($light-foreground, text);
+				color: map-get($light-theme-foreground, text);
 
 				&.active {
 					color: map-get($light-accent, default);
