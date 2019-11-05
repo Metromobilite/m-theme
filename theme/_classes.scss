@@ -40,16 +40,33 @@
 	&.column {
 		flex-direction: column;
 	}
+
+	&.align-center {
+		align-items: center;
+	}
+
+	> .flex {
+		flex: 1;
+		min-width: 0;
+	}
 }
 
 /**
  * Helper classes for icons.
  */
 .icon-left {
-	margin-right: $list-spacing;
+	margin-right: $spacing;
+
+	&-large {
+		margin-right: $spacing * 2;
+	}
 }
 .icon-right {
-	margin-left: $list-spacing;
+	margin-left: $spacing;
+
+	&-large {
+		margin-left: $spacing * 2;
+	}
 }
 
 /**
@@ -68,4 +85,26 @@
  */
 .end-with-bg {
 	padding-bottom: $end-bg-size;
+}
+
+.drop-shadow {
+	@include drop-shadow();
+}
+
+.circle {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.rounded {
+	overflow: hidden;
+
+	&:not(&--top) {
+		border-radius: $shape-radius;
+	}
+
+	&--top {
+		border-top-left-radius: $shape-radius;
+		border-top-right-radius: $shape-radius;
+	}
 }

@@ -24,3 +24,38 @@ $dark-theme-elevation-colors: (
 		map-get($dark-theme-elevation-colors, $elevation)
 	);
 }
+
+@mixin full-height() {
+	height: calc(100vh - #{$mpwa-toolbar-main-navigation-height});
+}
+
+@mixin simple-page() {
+	@include full-height();
+
+	display: block;
+	width: 100%;
+	position: relative;
+	pointer-events: auto;
+	overflow-y: auto;
+	align-self: flex-start;
+
+	body.dark-theme & {
+		background: map-get($mpwa-dark-background, container);
+	}
+	body.light-theme & {
+		background: map-get($mpwa-light-background, container);
+	}
+
+	.m-toolbar {
+		position: fixed;
+	}
+}
+
+@mixin drop-shadow() {
+	body.dark-theme & {
+		box-shadow: $mpwa-dark-box-shadow;
+	}
+	body.light-theme & {
+		box-shadow: $mpwa-light-box-shadow;
+	}
+}
