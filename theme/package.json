@@ -1,6 +1,6 @@
 {
   "name": "@metromobilite/m-theme",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A theme based on the angular material package.",
   "main": "index.js",
   "scripts": {
