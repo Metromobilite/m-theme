@@ -43,18 +43,7 @@
 	z-index: 1;
 
 	body.dark-theme & {
-		background: map-get($dark-theme-background, app-bar);
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: dark-color-overlay(16);
-			z-index: -1;
-		}
+		background: dark-color-overlay(16);
 	}
 
 	.mat-toolbar-row,
@@ -77,9 +66,7 @@
 		box-shadow: 0 -8px 16px rgba(black, 0.5);
 
 		body.dark-theme & {
-			&::before {
-				background: dark-color-overlay(24);
-			}
+			background: dark-color-overlay(24);
 		}
 
 		a {
