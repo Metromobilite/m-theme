@@ -40,10 +40,10 @@ $dark-theme-elevation-colors: (
 	align-self: flex-start;
 
 	body.dark-theme & {
-		background: map-get($dark-theme-background, container);
+		background: map-get($dark-theme-background, background);
 	}
 	body.light-theme & {
-		background: map-get($light-theme-background, container);
+		background: map-get($light-theme-background, background);
 	}
 
 	.m-toolbar {
