@@ -26,8 +26,17 @@
  * Helper classes to add background dark behavior according to the elevation values.
  */
 @each $elevation, $value in $dark-theme-elevation-colors {
-	.dark-overlay-#{$elevation} {
-		background: dark-color-overlay($elevation);
+	.m-elevation-#{$elevation} {
+		body.dark-theme & {
+			background: dark-color-overlay($elevation);
+
+			&.mat-list-item {
+				&:focus,
+				&:hover {
+					background: dark-color-overlay($elevation);
+				}
+			}
+		}
 	}
 }
 

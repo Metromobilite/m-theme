@@ -9,7 +9,6 @@
  *   - m-list => to display expansion panels as mat-list style.
  *   - flat => remove the box shadow on each expansion panels.
  *   - important => add border radius and more spacing on each items.
- *   - no-background => remove accordion background.
  *   - no-padding => remove the accordion padding.
  *
  * Available classes on mat-expansion-panel-header:
@@ -25,18 +24,10 @@
 	padding: $list-spacing;
 	display: block;
 
-	.dark-theme & {
-		background: dark-color-overlay(2);
-	}
-
 	.mat-expansion-panel {
 		border-radius: 0;
 		border: 0px solid transparent;
 		transition: border-radius 225ms, border 225ms, margin 225ms;
-
-		.dark-theme & {
-			background: dark-color-overlay(8);
-		}
 
 		&:first-of-type {
 			border-top-right-radius: 0;
@@ -55,7 +46,8 @@
 			transition: padding 200ms;
 			position: relative;
 
-			&:focus {
+			&:focus,
+			&:hover {
 				background: transparent;
 			}
 
@@ -132,21 +124,18 @@
 			padding: $list-spacing $list-spacing * 2;
 			display: flex;
 
-			.dark-theme & {
-				background: dark-color-overlay(12);
-			}
-
 			> .mat-button {
+				padding: 0;
+				border-radius: $shape-radius;
+
 				&:not(:last-of-type) {
 					margin-right: $list-spacing;
 				}
 			}
 		}
 
-		@media (hover: none) {
-			&:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
-				background: transparent;
-			}
+		&:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
+			background: transparent;
 		}
 	}
 
@@ -196,12 +185,6 @@
 				border-bottom-right-radius: $shape-radius;
 				border-bottom-left-radius: $shape-radius;
 			}
-		}
-	}
-
-	&.no-background {
-		.dark-theme & {
-			background: transparent;
 		}
 	}
 

@@ -8,7 +8,6 @@
  * Available classes on mat-list/mat-action-list/ect...:
  *   - flat => remove the box shadow on each expansion panels.
  *   - important => add border radius and more spacing on each list items.
- *   - no-background => remove the list wrapper background.
  *   - no-padding => remove the list wrapper padding.
  *
  * Available classes on mat-list-item:
@@ -21,10 +20,6 @@
 .mat-list-base.m-theme {
 	padding: $list-spacing;
 
-	.dark-theme & {
-		background-color: dark-color-overlay(2);
-	}
-
 	.mat-list-item {
 		@include mat-elevation(1);
 
@@ -35,11 +30,6 @@
 
 		&:not(:last-of-type) {
 			margin-bottom: $list-spacing / 4;
-		}
-
-		&:focus,
-		&:hover {
-			background: transparent !important;
 		}
 
 		&,
@@ -64,10 +54,6 @@
 			.mat-list-text {
 				height: 100%;
 				justify-content: center;
-			}
-
-			.dark-theme & {
-				background-color: dark-color-overlay(8);
 			}
 
 			.mat-list-icon {
@@ -127,12 +113,6 @@
 			&:not(:last-of-type) {
 				margin-bottom: $list-spacing;
 			}
-		}
-	}
-
-	&.no-background {
-		.dark-theme & {
-			background-color: transparent;
 		}
 	}
 
