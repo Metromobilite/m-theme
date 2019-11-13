@@ -1,7 +1,7 @@
 @import "./variables";
 
 $dark-theme-elevation-colors: (
-	0: 1,
+	0: 0,
 	1: 0.05,
 	2: 0.07,
 	3: 0.08,
@@ -18,11 +18,8 @@ $dark-theme-elevation-colors: (
  *
  * Return an rgba color according to the $elevation parameter.
  **/
-@function dark-color-overlay($elevation: 0) {
-	@return rgba(
-		lighten(map-get($dark-theme-background, overlay), 60%),
-		map-get($dark-theme-elevation-colors, $elevation)
-	);
+@function dark-color-overlay($elevation) {
+	@return rgba(map-get($dark-theme-background, overlay), map-get($dark-theme-elevation-colors, $elevation));
 }
 
 @mixin full-height() {

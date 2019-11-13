@@ -9,12 +9,12 @@
 
 .mat-drawer {
 	body.dark-theme & {
-		background: map-get($dark-theme-background, container);
+		background: map-get($dark-theme-background, background);
 	}
 
 	.mat-drawer-inner-container {
 		body.dark-theme & {
-			background: dark-color-overlay(16);
+			background: dark-color-overlay(2);
 		}
 	}
 }

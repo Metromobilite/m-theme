@@ -43,9 +43,9 @@ $light-theme-foreground: $mat-light-theme-foreground !default;
 
 $mat-dark-theme-background: (
 	status-bar: black,
-	app-bar: #26222a,
+	app-bar: #16111a,
 	background: #16111a,
-	overlay: #121212,
+	overlay: #ffffff,
 	hover: rgba(white, 0.04),
 	card: map_get($mat-grey, 800),
 	dialog: map_get($mat-grey, 800),
@@ -106,7 +106,7 @@ $list-item-fz-secondary: 12px;
 $end-bg-size: 143px;
 
 /**** snack-bar ****/
-$snack-bar-bg: #323232;
+$snack-bar-bg: #333333;
 
 /**** toolbar ****/
 $toolbar-height: 56px;

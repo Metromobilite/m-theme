@@ -76,6 +76,12 @@
 		align-items: center;
 		box-shadow: 0 -8px 16px rgba(black, 0.5);
 
+		body.dark-theme & {
+			&::before {
+				background: dark-color-overlay(24);
+			}
+		}
+
 		a {
 			display: flex;
 			flex-direction: column;
