@@ -127,10 +127,10 @@
 			> .mat-button {
 				padding: 0;
 				border-radius: $shape-radius;
+			}
 
-				&:not(:last-of-type) {
-					margin-right: $list-spacing;
-				}
+			> .spacing {
+				margin-right: $list-spacing;
 			}
 		}
 
