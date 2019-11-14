@@ -1,0 +1,7 @@
+@import "../variables";
+
+.mat-tree.m-theme {
+	body.dark-theme & {
+		background: transparent;
+	}
+}

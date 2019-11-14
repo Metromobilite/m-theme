@@ -14,6 +14,9 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +27,7 @@ import { ExpansionPanelPageComponent } from './pages/expansion-panel-page/expans
 import { DialogPageComponent } from './pages/dialog-page/dialog-page.component';
 import { BottomSheetPageComponent } from './pages/bottom-sheet-page/bottom-sheet-page.component';
 import { DemoBottomSheetComponent } from './demo-bottom-sheet/demo-bottom-sheet.component';
+import { TreePageComponent } from './pages/tree-page/tree-page.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { DemoBottomSheetComponent } from './demo-bottom-sheet/demo-bottom-sheet.
     DialogPageComponent,
     BottomSheetPageComponent,
     DemoBottomSheetComponent,
+    TreePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,9 @@ import { DemoBottomSheetComponent } from './demo-bottom-sheet/demo-bottom-sheet.
     MatSidenavModule,
     MatProgressBarModule,
     MatSnackBarModule,
+    MatTreeModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

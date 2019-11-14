@@ -15,6 +15,7 @@ export class AppComponent {
     { path: '/expansion-panel', label: 'Expansion Panel' },
     { path: '/dialog', label: 'Dialog' },
     { path: '/bottom-sheet', label: 'Bottom Sheet' },
+    { path: '/tree', label: 'Tree' },
   ];
 
   constructor(
