@@ -12,7 +12,7 @@
           <mat-icon>menu</mat-icon>
         </button>
         <h1 style="flex: 1;">M Theme</h1>
-        <mat-button-toggle-group (change)="onThemeSwitchChange($event)" name="themeToggle" aria-label="Theme Toggle">
+        <mat-button-toggle-group class="m-theme" (change)="onThemeSwitchChange($event)" name="themeToggle" aria-label="Theme Toggle">
           <mat-button-toggle value="dark-theme" [checked]="true">Dark</mat-button-toggle>
           <mat-button-toggle value="light-theme">Light</mat-button-toggle>
         </mat-button-toggle-group>
