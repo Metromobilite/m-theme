@@ -69,12 +69,20 @@
 	&-large {
 		margin-right: $spacing * 2;
 	}
+
+	&-very-large {
+		margin-right: $spacing * 4;
+	}
 }
 .icon-right {
 	margin-left: $spacing;
 
 	&-large {
 		margin-left: $spacing * 2;
+	}
+
+	&-very-large {
+		margin-left: $spacing * 4;
 	}
 }
 

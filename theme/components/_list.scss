@@ -120,4 +120,19 @@
 	.mat-list-item.no-padding .mat-list-item-content {
 		padding: 0;
 	}
+
+	&.mat-nav-list {
+		.mat-list-item {
+			&.active {
+				body.dark-theme & {
+					background: rgba(map-get($dark-primary, default), 0.2);
+					color: map-get($dark-primary, default);
+				}
+				body.light-theme & {
+					background: rgba(map-get($light-primary, default), 0.2);
+					color: map-get($light-primary, default);
+				}
+			}
+		}
+	}
 }

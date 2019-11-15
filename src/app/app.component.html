@@ -4,6 +4,12 @@
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     <h2>Snack bar</h2>
     <button mat-raised-button color="primary" (click)="openSnackBar()">Show snack-bar</button>
+    <mat-nav-list class="m-theme important flat">
+      <a mat-list-item *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="active">
+        <mat-icon class="icon-left-very-large" aria-hidden="true">picture_in_picture</mat-icon>
+        <span>{{ link.label }}</span>
+      </a>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar style="position: fixed; top: 0; left: 0; z-index: 1;">

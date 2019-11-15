@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "build-theme": "node scripts/theme-build.js",
+    "publish": "npm publish dist/@metromobilite/m-theme --access public",
+    "build-publish": "npm run build-theme && npm run publish",
+    "serve-4600": "ng serve --port 4600",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
