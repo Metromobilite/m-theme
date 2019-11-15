@@ -90,16 +90,26 @@ $dark-warn: mat-palette($m-dark-theme-red);
 $light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
+/**** Spacing ****/
 $spacing: 8px;
+$button-icon-spacing: $spacing;
+
+/**** Shape ****/
 $shape-radius: 8px;
 $button-radius: 16px;
-$button-icon-spacing: $spacing;
+
+/**** font size ****/
+$default-fz: 1.4rem;
+$default-fz-small: 1.2rem;
+$default-fz-big: 1.8rem;
+$header-fz: $default-fz + 0.2rem;
+$header-fz-big: $header-fz + 0.4rem;
 
 /**** list ****/
 $list-spacing: $spacing;
 $list-icon-size: 24px;
-$list-item-fz: 14px;
-$list-item-fz-secondary: 12px;
+$list-item-fz: $default-fz;
+$list-item-fz-secondary: $default-fz-small;
 
 /**** Container ****/
 $end-bg-size: 143px;
@@ -110,13 +120,6 @@ $snack-bar-bg: #333333;
 /**** toolbar ****/
 $toolbar-height: 56px;
 $toolbar-main-nav-height: $toolbar-height + $spacing;
-
-/**** font size ****/
-$default-fz: 14px;
-$default-fz-small: 12px;
-$default-fz-big: 18px;
-$header-fz: $default-fz + 2px;
-$header-fz-big: $header-fz + 4px;
 
 /**** shadow ****/
 $light-box-shadow: 0 4px 8px rgba(black, 0.5);

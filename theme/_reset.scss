@@ -2,7 +2,13 @@ html,
 body {
 	height: 100%;
 }
+
+html {
+	font-size: 0.625em;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-size: 1.6rem;
 }

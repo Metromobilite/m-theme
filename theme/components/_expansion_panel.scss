@@ -45,6 +45,7 @@
 			-webkit-tap-highlight-color: transparent;
 			transition: padding 200ms;
 			position: relative;
+			font-size: $default-fz;
 
 			&:focus,
 			&:hover {

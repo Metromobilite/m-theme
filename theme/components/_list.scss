@@ -26,7 +26,6 @@
 		overflow: hidden;
 		font-size: $list-item-fz;
 		line-height: $list-item-fz;
-		font-weight: 200;
 
 		&:not(:last-of-type) {
 			margin-bottom: $list-spacing / 4;
