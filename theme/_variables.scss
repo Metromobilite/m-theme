@@ -98,6 +98,9 @@ $button-icon-spacing: $spacing;
 $shape-radius: 8px;
 $button-radius: 16px;
 
+/**** Icons ****/
+$icon-large: 40px;
+
 /**** font size ****/
 $default-fz: 1.4rem;
 $default-fz-small: 1.2rem;
@@ -108,6 +111,7 @@ $header-fz-big: $header-fz + 0.4rem;
 /**** list ****/
 $list-spacing: $spacing;
 $list-icon-size: 24px;
+$list-two-line-height: 72px;
 $list-item-fz: $default-fz;
 $list-item-fz-secondary: $default-fz-small;
 

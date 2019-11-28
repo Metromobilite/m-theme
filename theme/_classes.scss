@@ -62,27 +62,29 @@
 
 /**
  * Helper classes for icons.
+ * Available classes: .m-icon, .[m-]icon[[-very]-large], .m-icon.important
  */
-.icon-left {
-	margin-right: $spacing;
-
-	&-large {
-		margin-right: $spacing * 2;
+.m-icon,
+.icon {
+	&-left {
+		@include icon-margin(right);
 	}
 
-	&-very-large {
-		margin-right: $spacing * 4;
-	}
-}
-.icon-right {
-	margin-left: $spacing;
-
-	&-large {
-		margin-left: $spacing * 2;
+	&-right {
+		@include icon-margin(left);
 	}
 
-	&-very-large {
-		margin-left: $spacing * 4;
+	&.important {
+		height: $icon-large;
+		width: $icon-large;
+		font-size: $icon-large;
+
+		body.dark-theme & {
+			color: map-get($dark-primary, default);
+		}
+		body.light-theme & {
+			color: map-get($light-primary, default);
+		}
 	}
 }
 

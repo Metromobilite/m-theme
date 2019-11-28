@@ -74,6 +74,10 @@
 		&.double-action {
 			position: relative;
 
+			&.m-2-line {
+				height: $list-two-line-height;
+			}
+
 			.mat-line[mat-ripple] {
 				position: relative;
 				height: 100%;

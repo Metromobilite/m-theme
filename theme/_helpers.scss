@@ -89,3 +89,17 @@ $dark-theme-elevation-colors: (
 		box-shadow: $light-box-shadow;
 	}
 }
+
+@mixin icon-margin($direction) {
+	margin-#{$direction}: $spacing;
+
+	&-large {
+		margin-#{$direction}: $spacing * 2;
+	}
+	&-very-large {
+		margin-#{$direction}: $spacing * 4;
+	}
+	&-small {
+		margin-#{$direction}: $spacing / 2;
+	}
+}
