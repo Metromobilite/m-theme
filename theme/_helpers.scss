@@ -23,17 +23,7 @@
 }
 
 $dark-theme-elevation-colors: (
-	// 0: 0,
-		// 1: 0.05,
-		// 2: 0.07,
-		// 3: 0.08,
-		// 4: 0.09,
-		// 6: 0.11,
-		// 8: 0.12,
-		// 12: 0.14,
-		// 16: 0.15,
-		// 24: 0.16
-		0: 0%,
+	0: 0%,
 	1: 5%,
 	2: 7%,
 	3: 8%,
@@ -101,5 +91,25 @@ $dark-theme-elevation-colors: (
 	}
 	&-small {
 		margin-#{$direction}: $spacing / 2;
+	}
+}
+
+@mixin end-background() {
+	background-image: url($assets-path+"/images/end-background.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+}
+
+@mixin end-background-filter($elvation) {
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: $end-bg-size;
+		width: 100%;
+		body.dark-theme & {
+			background: linear-gradient(dark-color-overlay($elvation) 10%, rgba(dark-color-overlay($elvation), 0));
+		}
 	}
 }

@@ -116,7 +116,7 @@ $list-item-fz: $default-fz;
 $list-item-fz-secondary: $default-fz-small;
 
 /**** Container ****/
-$end-bg-size: 143px;
+$end-bg-size: 143px + $spacing * 2;
 
 /**** snack-bar ****/
 $snack-bar-bg: #333333;

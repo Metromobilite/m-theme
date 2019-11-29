@@ -28,6 +28,7 @@ import { DialogPageComponent } from './pages/dialog-page/dialog-page.component';
 import { BottomSheetPageComponent } from './pages/bottom-sheet-page/bottom-sheet-page.component';
 import { DemoBottomSheetComponent } from './demo-bottom-sheet/demo-bottom-sheet.component';
 import { TreePageComponent } from './pages/tree-page/tree-page.component';
+import { BackgroundPageComponent } from './pages/background-page/background-page.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TreePageComponent } from './pages/tree-page/tree-page.component';
     BottomSheetPageComponent,
     DemoBottomSheetComponent,
     TreePageComponent,
+    BackgroundPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+@import "../../../../theme/variables";
+@import "../../../../theme/helpers";
+
+:host {
+	.page-content {
+		@include end-background-filter(2);
+
+		body.dark-theme & {
+			background: dark-color-overlay(2);
+			@include end-background;
+		}
+	}
+}
+
+.page-content {
+	max-width: 600px;
+	margin: auto;
+	padding: $spacing * 2;
+	padding-bottom: $end-bg-size;
+	position: relative;
+}

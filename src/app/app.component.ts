@@ -16,6 +16,7 @@ export class AppComponent {
     { path: '/dialog', label: 'Dialog' },
     { path: '/bottom-sheet', label: 'Bottom Sheet' },
     { path: '/tree', label: 'Tree' },
+    { path: '/background', label: 'Background' },
   ];
 
   constructor(

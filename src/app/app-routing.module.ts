@@ -6,6 +6,7 @@ import { ExpansionPanelPageComponent } from './pages/expansion-panel-page/expans
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ButtonPageComponent } from './pages/button-page/button-page.component';
 import { TreePageComponent } from './pages/tree-page/tree-page.component';
+import { BackgroundPageComponent } from './pages/background-page/background-page.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'dialog', component: DialogPageComponent },
   { path: 'bottom-sheet', component: BottomSheetPageComponent },
   { path: 'tree', component: TreePageComponent },
+  { path: 'background', component: BackgroundPageComponent },
 ];
 
 @NgModule({
