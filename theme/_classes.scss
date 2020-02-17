@@ -129,19 +129,19 @@
 }
 
 .spacing-iphone-X {
-	padding-bottom: env(safe-area-inset-bottom);
-  margin-left: env(safe-area-inset-left);
+	padding-bottom: env(safe-area-inset-bottom) !important;
+  margin-left: env(safe-area-inset-left) !important;
 }
 
 
 @supports (padding: max(0px)) {
 	.spacing-iphone-X {
-		padding-bottom: max(var($spacing), env(safe-area-inset-bottom));
+		padding-bottom: max(var($spacing), env(safe-area-inset-bottom)) !important;
 	}
 }
 
 @supports (margin: max(0px)) {
 	.spacing-iphone-X {
-		margin-left: max(var($spacing), env(safe-area-inset-left));
+		margin-left: max(var($spacing), env(safe-area-inset-left)) !important;
 	}
 }
