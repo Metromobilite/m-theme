@@ -21,188 +21,188 @@
  ********************************************************************************/
 
 .m-theme.mat-accordion {
-	padding: $list-spacing;
-	display: block;
+  padding: $list-spacing;
+  display: block;
 
-	.mat-expansion-panel {
-		border-radius: 0;
-		border: 0px solid transparent;
-		transition: border-radius 225ms, border 225ms, margin 225ms;
+  .mat-expansion-panel {
+    border-radius: 0;
+    border: 0px solid transparent;
+    transition: border-radius 225ms, border 225ms, margin 225ms;
 
-		&:first-of-type {
-			border-top-right-radius: 0;
-			border-top-left-radius: 0;
-		}
-		&:last-of-type {
-			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 0;
-		}
+    &:first-of-type {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+    &:last-of-type {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
-		.mat-expansion-panel-header {
-			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 0;
-			padding: $list-spacing / 2 $list-spacing * 2;
-			-webkit-tap-highlight-color: transparent;
-			transition: padding 200ms;
-			position: relative;
-			font-size: $default-fz;
+    .mat-expansion-panel-header {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: $list-spacing / 2 $list-spacing * 2;
+      -webkit-tap-highlight-color: transparent;
+      transition: padding 200ms;
+      position: relative;
+      font-size: $default-fz;
 
-			&:focus,
-			&:hover {
-				background: transparent;
-			}
+      &:focus,
+      &:hover {
+        background: transparent;
+      }
 
-			&.no-indicator {
-				.mat-expansion-panel-header-title {
-					margin: 0;
-				}
-				.mat-expansion-indicator {
-					display: none;
-				}
-			}
+      &.no-indicator {
+        .mat-expansion-panel-header-title {
+          margin: 0;
+        }
+        .mat-expansion-indicator {
+          display: none;
+        }
+      }
 
-			&.medium {
-				padding: $list-spacing $list-spacing * 2;
-			}
+      &.medium {
+        padding: $list-spacing $list-spacing * 2;
+      }
 
-			&.big {
-				padding: $list-spacing * 2 $list-spacing * 2;
-			}
+      &.big {
+        padding: $list-spacing * 2 $list-spacing * 2;
+      }
 
-			&.with-separator::after {
-				content: "";
-				height: 1px;
-				width: 0;
-				position: absolute;
-				left: 50%;
-				bottom: 0;
-				transform: translateX(-50%);
-				transition: width 250ms;
+      &.with-separator::after {
+        content: "";
+        height: 1px;
+        width: 0;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: width 250ms;
 
-				.dark-theme & {
-					background: map-get($dark-theme-foreground, divider);
-				}
-				.light-theme & {
-					background: map-get($light-theme-foreground, divider);
-				}
-			}
+        .dark-theme & {
+          background: map-get($dark-theme-foreground, divider);
+        }
+        .light-theme & {
+          background: map-get($light-theme-foreground, divider);
+        }
+      }
 
-			&.no-padding {
-				padding: 0;
-			}
+      &.no-padding {
+        padding: 0;
+      }
 
-			&.mat-expanded {
-				&.with-separator::after {
-					width: calc(100% - #{($list-spacing * 2)});
-				}
-			}
-		}
+      &.mat-expanded {
+        &.with-separator::after {
+          width: calc(100% - #{($list-spacing * 2)});
+        }
+      }
+    }
 
-		&.mat-expanded:not(.no-highlight) {
-			.dark-theme & {
-				border: 1px solid mat-color($dark-primary);
-			}
-			.light-theme & {
-				border: 1px solid mat-color($light-primary);
-			}
-		}
+    &.mat-expanded:not(.no-highlight) {
+      .dark-theme & {
+        border: 1px solid mat-color($dark-primary);
+      }
+      .light-theme & {
+        border: 1px solid mat-color($light-primary);
+      }
+    }
 
-		&.mat-expansion-panel-spacing {
-			margin: $list-spacing 0;
-		}
+    &.mat-expansion-panel-spacing {
+      margin: $list-spacing 0;
+    }
 
-		.mat-expansion-panel-body {
-			padding: 0 $list-spacing * 2 $list-spacing * 2;
-		}
+    .mat-expansion-panel-body {
+      padding: 0 $list-spacing * 2 $list-spacing * 2;
+    }
 
-		&.content-no-spacing {
-			.mat-expansion-panel-body {
-				padding: 0;
-			}
-		}
+    &.content-no-spacing {
+      .mat-expansion-panel-body {
+        padding: 0;
+      }
+    }
 
-		.actions {
-			padding: $list-spacing $list-spacing * 2;
-			display: flex;
+    .actions {
+      padding: $list-spacing $list-spacing * 2;
+      display: flex;
 
-			> .mat-button {
-				padding: 0;
-				border-radius: $shape-radius;
-			}
+      > .mat-button {
+        padding: 0;
+        border-radius: $shape-radius;
+      }
 
-			> .spacing {
-				margin-right: $list-spacing;
-			}
-		}
+      > .spacing {
+        margin-right: $list-spacing;
+      }
+    }
 
-		&:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
-			background: transparent;
-		}
-	}
+    &:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
+      background: transparent;
+    }
+  }
 
-	&.m-list {
-		.mat-expansion-panel {
-			margin-top: $list-spacing / 4;
+  &.m-list {
+    .mat-expansion-panel {
+      margin-top: $list-spacing / 4;
 
-			&.mat-expansion-panel-spacing {
-				margin: $list-spacing 0;
+      &.mat-expansion-panel-spacing {
+        margin: $list-spacing 0;
 
-				&:last-of-type {
-					margin-bottom: 0;
-				}
-			}
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
 
-			&:first-of-type {
-				margin-top: 0;
-			}
-		}
-	}
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
 
-	&.flat {
-		.mat-expansion-panel {
-			box-shadow: none;
-		}
-	}
+  &.flat {
+    .mat-expansion-panel {
+      box-shadow: none;
+    }
+  }
 
-	&.important {
-		&.m-list {
-			.mat-expansion-panel {
-				margin-top: $list-spacing;
-				border-radius: $shape-radius;
+  &.important {
+    &.m-list {
+      .mat-expansion-panel {
+        margin-top: $list-spacing;
+        border-radius: $shape-radius;
 
-				&:first-of-type {
-					margin-top: 0;
-				}
-			}
-		}
-		.mat-expansion-panel {
-			border-radius: $shape-radius;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+    .mat-expansion-panel {
+      border-radius: $shape-radius;
 
-			&:first-of-type {
-				border-top-right-radius: $shape-radius;
-				border-top-left-radius: $shape-radius;
-			}
-			&:last-of-type {
-				border-bottom-right-radius: $shape-radius;
-				border-bottom-left-radius: $shape-radius;
-			}
-		}
-	}
+      &:first-of-type {
+        border-top-right-radius: $shape-radius;
+        border-top-left-radius: $shape-radius;
+      }
+      &:last-of-type {
+        border-bottom-right-radius: $shape-radius;
+        border-bottom-left-radius: $shape-radius;
+      }
+    }
+  }
 
-	&.no-padding,
-	.mat-expansion-panel-header.no-padding {
-		padding: 0;
-	}
+  &.no-padding,
+  .mat-expansion-panel-header.no-padding {
+    padding: 0;
+  }
 
-	.mat-expansion-panel-header-title {
-		align-items: center;
+  .mat-expansion-panel-header-title {
+    align-items: center;
 
-		.panel-icon {
-			margin-right: $button-icon-spacing * 2;
-			height: $list-icon-size;
-			width: $list-icon-size;
-			line-height: $list-icon-size;
-			font-size: $list-icon-size;
-		}
-	}
+    .panel-icon {
+      margin-right: $button-icon-spacing * 2;
+      height: $list-icon-size;
+      width: $list-icon-size;
+      line-height: $list-icon-size;
+      font-size: $list-icon-size;
+    }
+  }
 }

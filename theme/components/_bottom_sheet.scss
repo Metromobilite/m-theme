@@ -2,9 +2,9 @@
 @import "../helpers";
 
 .mat-bottom-sheet-container.m-theme {
-	padding: 0;
+  padding: 0;
 
-	body.dark-theme & {
-		background: dark-color-overlay(16);
-	}
+  body.dark-theme & {
+    background: dark-color-overlay(16);
+  }
 }

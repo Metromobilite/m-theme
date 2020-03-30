@@ -2,13 +2,13 @@
 @import "../helpers";
 
 .mat-button-toggle-group.m-theme {
-	body.dark-theme & {
-		.mat-button-toggle {
-			background: dark-color-overlay(8);
+  body.dark-theme & {
+    .mat-button-toggle {
+      background: dark-color-overlay(8);
 
-			&-checked {
-				background: dark-color-overlay(0);
-			}
-		}
-	}
+      &-checked {
+        background: dark-color-overlay(0);
+      }
+    }
+  }
 }

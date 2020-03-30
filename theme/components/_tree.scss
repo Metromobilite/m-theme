@@ -1,11 +1,11 @@
 @import "../variables";
 
 .mat-tree.m-theme {
-	.mat-tree-node {
-		font-size: $default-fz;
-	}
+  .mat-tree-node {
+    font-size: $default-fz;
+  }
 
-	body.dark-theme & {
-		background: transparent;
-	}
+  body.dark-theme & {
+    background: transparent;
+  }
 }

@@ -14,118 +14,118 @@
  ********************************************************************************/
 
 .m-toolbar {
-	display: flex;
-	box-sizing: border-box;
-	padding: 0 $spacing * 2;
-	width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 $spacing * 2;
+  width: 100%;
 
-	&.multiline {
-		flex-direction: column;
-	}
+  &.multiline {
+    flex-direction: column;
+  }
 
-	&:not(.multiline) {
-		flex-direction: row;
-		align-items: center;
-		white-space: nowrap;
-	}
+  &:not(.multiline) {
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+  }
 
-	.m-toolbar-row {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		white-space: nowrap;
-	}
+  .m-toolbar-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+  }
 }
 
 .mat-toolbar,
 .m-toolbar {
-	position: relative;
-	z-index: 1;
+  position: relative;
+  z-index: 1;
 
-	body.dark-theme & {
-		background: dark-color-overlay(16);
-	}
+  body.dark-theme & {
+    background: dark-color-overlay(16);
+  }
 
-	.mat-toolbar-row,
-	.m-toolbar-row {
-		&.align-end {
-			align-items: flex-end;
-		}
-		&.no-padding {
-			padding: 0;
-		}
-	}
+  .mat-toolbar-row,
+  .m-toolbar-row {
+    &.align-end {
+      align-items: flex-end;
+    }
+    &.no-padding {
+      padding: 0;
+    }
+  }
 
-	&.main-navigation,
-	&.bottom-navbar {
-		position: fixed !important;
-		bottom: 0;
-		z-index: 2;
-		justify-content: space-around;
-		align-items: center;
-		box-shadow: 0 -8px 16px rgba(black, 0.5);
+  &.main-navigation,
+  &.bottom-navbar {
+    position: fixed !important;
+    bottom: 0;
+    z-index: 2;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -8px 16px rgba(black, 0.5);
 
-		body.dark-theme & {
-			background: dark-color-overlay(24);
-		}
+    body.dark-theme & {
+      background: dark-color-overlay(24);
+    }
 
-		a {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			font-size: 11px;
-			line-height: 11px;
-			font-weight: normal;
-			text-decoration: none;
-			text-align: center;
-			text-decoration: none;
-			opacity: 0.7;
-			transition: all 200ms;
-			flex-basis: 80px;
-			height: $toolbar-main-nav-height;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      line-height: 11px;
+      font-weight: normal;
+      text-decoration: none;
+      text-align: center;
+      text-decoration: none;
+      opacity: 0.7;
+      transition: all 200ms;
+      flex-basis: 80px;
+      height: $toolbar-main-nav-height;
 
-			.mat-icon {
-				margin-bottom: $spacing / 2;
-			}
+      .mat-icon {
+        margin-bottom: $spacing / 2;
+      }
 
-			&.active {
-				opacity: 1;
-				font-size: 13px;
-				line-height: 13px;
-			}
+      &.active {
+        opacity: 1;
+        font-size: 13px;
+        line-height: 13px;
+      }
 
-			.dark-theme & {
-				color: map-get($dark-theme-foreground, text);
+      .dark-theme & {
+        color: map-get($dark-theme-foreground, text);
 
-				&.active {
-					color: map-get($dark-accent, default);
-				}
-			}
-			.light-theme & {
-				color: map-get($light-theme-foreground, text);
+        &.active {
+          color: map-get($dark-accent, default);
+        }
+      }
+      .light-theme & {
+        color: map-get($light-theme-foreground, text);
 
-				&.active {
-					color: map-get($light-accent, default);
-				}
-			}
-		}
-	}
+        &.active {
+          color: map-get($light-accent, default);
+        }
+      }
+    }
+  }
 
-	&.simple {
-		padding-left: $spacing * 4 + 40px;
-	}
+  &.simple {
+    padding-left: $spacing * 4 + 40px;
+  }
 
-	&.with-mat-tab {
-		padding: 0;
-	}
+  &.with-mat-tab {
+    padding: 0;
+  }
 
-	.m-toolbar-title {
-		font-size: $header-fz-big;
-		font-weight: bold;
-		line-height: $toolbar-height + $spacing;
-		margin: 0;
-		padding: 0;
-		flex: 1;
-	}
+  .m-toolbar-title {
+    font-size: $header-fz-big;
+    font-weight: bold;
+    line-height: $toolbar-height + $spacing;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
 }

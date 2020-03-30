@@ -10,54 +10,74 @@
   * font-size on non first of type items.
   */
 .m-multiline {
-	display: flex;
-	flex-direction: column;
-	font-size: $list-item-fz;
+  display: flex;
+  flex-direction: column;
+  font-size: $list-item-fz;
 
-	> * {
-		&:not(:first-of-type) {
-			font-size: $list-item-fz-secondary;
-			opacity: 0.7;
-		}
-	}
+  > * {
+    &:not(:first-of-type) {
+      font-size: $list-item-fz-secondary;
+      opacity: 0.7;
+    }
+  }
 }
 
 /**
  * Helper classes to add background dark behavior according to the elevation values.
  */
 @each $elevation, $value in $dark-theme-elevation-colors {
-	.m-elevation-#{$elevation} {
-		body.dark-theme & {
-			background: dark-color-overlay($elevation);
+  .m-elevation-#{$elevation} {
+    body.dark-theme & {
+      background: dark-color-overlay($elevation);
 
-			&.mat-list-item {
-				&:focus,
-				&:hover {
-					background: dark-color-overlay($elevation);
-				}
-			}
-		}
-	}
+      &.mat-list-item {
+        &:focus,
+        &:hover {
+          background: dark-color-overlay($elevation);
+        }
+      }
+    }
+  }
 }
 
 /**
  * Helper classes to build flex layout.
  */
 .layout {
-	display: flex;
+  display: flex;
 
-	&.column {
-		flex-direction: column;
-	}
+  &.column {
+    flex-direction: column;
+  }
 
-	&.align-center {
-		align-items: center;
-	}
+  &.align-center {
+    align-items: center;
+  }
 
-	> .flex {
-		flex: 1;
-		min-width: 0;
-	}
+  &.content-between {
+    justify-content: space-between;
+  }
+
+  &.content-around {
+    justify-content: space-around;
+  }
+
+  &.content-center {
+    justify-content: center;
+  }
+
+  &.content-start {
+    justify-content: flex-start;
+  }
+
+  &.no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  > .flex {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 /**
@@ -66,36 +86,36 @@
  */
 .m-icon,
 .icon {
-	&-left {
-		@include icon-margin(right);
-	}
+  &-left {
+    @include icon-margin(right);
+  }
 
-	&-right {
-		@include icon-margin(left);
-	}
+  &-right {
+    @include icon-margin(left);
+  }
 
-	&.important {
-		height: $icon-large;
-		width: $icon-large;
-		font-size: $icon-large;
+  &.important {
+    height: $icon-large;
+    width: $icon-large;
+    font-size: $icon-large;
 
-		body.dark-theme & {
-			color: map-get($dark-primary, default);
-		}
-		body.light-theme & {
-			color: map-get($light-primary, default);
-		}
-	}
+    body.dark-theme & {
+      color: map-get($dark-primary, default);
+    }
+    body.light-theme & {
+      color: map-get($light-primary, default);
+    }
+  }
 }
 
 /**
  * Helper classes for text.
  */
 .ellipsis {
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
 }
 
 /**
@@ -103,45 +123,44 @@
  * TODO
  */
 .end-with-bg {
-	padding-bottom: $end-bg-size;
+  padding-bottom: $end-bg-size;
 }
 
 .drop-shadow {
-	@include drop-shadow();
+  @include drop-shadow();
 }
 
 .circle {
-	border-radius: 50%;
-	overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .rounded {
-	overflow: hidden;
+  overflow: hidden;
 
-	&:not(&--top) {
-		border-radius: $shape-radius;
-	}
+  &:not(&--top) {
+    border-radius: $shape-radius;
+  }
 
-	&--top {
-		border-top-left-radius: $shape-radius;
-		border-top-right-radius: $shape-radius;
-	}
+  &--top {
+    border-top-left-radius: $shape-radius;
+    border-top-right-radius: $shape-radius;
+  }
 }
 
 .spacing-iphone-X {
-	padding-bottom: env(safe-area-inset-bottom) !important;
+  padding-bottom: env(safe-area-inset-bottom) !important;
   margin-left: env(safe-area-inset-left) !important;
 }
 
-
 @supports (padding: max(0px)) {
-	.spacing-iphone-X {
-		padding-bottom: max(var($spacing), env(safe-area-inset-bottom)) !important;
-	}
+  .spacing-iphone-X {
+    padding-bottom: max(var($spacing), env(safe-area-inset-bottom)) !important;
+  }
 }
 
 @supports (margin: max(0px)) {
-	.spacing-iphone-X {
-		margin-left: max(var($spacing), env(safe-area-inset-left)) !important;
-	}
+  .spacing-iphone-X {
+    margin-left: max(var($spacing), env(safe-area-inset-left)) !important;
+  }
 }

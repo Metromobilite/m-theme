@@ -8,7 +8,7 @@
  * @return {Color}
  **/
 @function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 /**
@@ -19,20 +19,20 @@
  * @return {Color}
  **/
 @function shade($color, $percentage) {
-	@return mix(black, $color, $percentage);
+  @return mix(black, $color, $percentage);
 }
 
 $dark-theme-elevation-colors: (
-	0: 0%,
-	1: 5%,
-	2: 7%,
-	3: 8%,
-	4: 9%,
-	6: 11%,
-	8: 12%,
-	12: 14%,
-	16: 15%,
-	24: 16%
+  0: 0%,
+  1: 5%,
+  2: 7%,
+  3: 8%,
+  4: 9%,
+  6: 11%,
+  8: 12%,
+  12: 14%,
+  16: 15%,
+  24: 16%,
 );
 
 /**
@@ -41,75 +41,78 @@ $dark-theme-elevation-colors: (
  * Return an rgba color according to the $elevation parameter.
  **/
 @function dark-color-overlay($elevation) {
-	// @return rgba(map-get($dark-theme-background, overlay), map-get($dark-theme-elevation-colors, $elevation));
-	@return tint(map-get($dark-theme-background, background), map-get($dark-theme-elevation-colors, $elevation));
+  @return tint(map-get($dark-theme-background, background), map-get($dark-theme-elevation-colors, $elevation));
+}
+
+@function light-color-overlay($elevation) {
+  @return shade(map-get($light-theme-background, background), map-get($dark-theme-elevation-colors, $elevation));
 }
 
 @mixin full-height() {
-	height: calc(100vh - #{$toolbar-main-nav-height});
+  height: calc(100vh - #{$toolbar-main-nav-height});
 }
 
 @mixin simple-page() {
-	@include full-height();
+  @include full-height();
 
-	display: block;
-	width: 100%;
-	position: relative;
-	pointer-events: auto;
-	overflow-y: auto;
-	align-self: flex-start;
+  display: block;
+  width: 100%;
+  position: relative;
+  pointer-events: auto;
+  overflow-y: auto;
+  align-self: flex-start;
 
-	body.dark-theme & {
-		background: map-get($dark-theme-background, background);
-	}
-	body.light-theme & {
-		background: map-get($light-theme-background, background);
-	}
+  body.dark-theme & {
+    background: map-get($dark-theme-background, background);
+  }
+  body.light-theme & {
+    background: map-get($light-theme-background, background);
+  }
 
-	.m-toolbar {
-		position: fixed;
-	}
+  .m-toolbar {
+    position: fixed;
+  }
 }
 
 @mixin drop-shadow() {
-	body.dark-theme & {
-		box-shadow: $dark-box-shadow;
-	}
-	body.light-theme & {
-		box-shadow: $light-box-shadow;
-	}
+  body.dark-theme & {
+    box-shadow: $dark-box-shadow;
+  }
+  body.light-theme & {
+    box-shadow: $light-box-shadow;
+  }
 }
 
 @mixin icon-margin($direction) {
-	margin-#{$direction}: $spacing;
+  margin-#{$direction}: $spacing;
 
-	&-large {
-		margin-#{$direction}: $spacing * 2;
-	}
-	&-very-large {
-		margin-#{$direction}: $spacing * 4;
-	}
-	&-small {
-		margin-#{$direction}: $spacing / 2;
-	}
+  &-large {
+    margin-#{$direction}: $spacing * 2;
+  }
+  &-very-large {
+    margin-#{$direction}: $spacing * 4;
+  }
+  &-small {
+    margin-#{$direction}: $spacing / 2;
+  }
 }
 
 @mixin end-background() {
-	background-image: url($assets-path+"/images/end-background.jpg");
-	background-repeat: no-repeat;
-	background-position: 50% 100%;
+  background-image: url($assets-path + "/images/end-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
 }
 
 @mixin end-background-filter($elvation) {
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: $end-bg-size;
-		width: 100%;
-		body.dark-theme & {
-			background: linear-gradient(dark-color-overlay($elvation) 10%, rgba(dark-color-overlay($elvation), 0));
-		}
-	}
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: $end-bg-size;
+    width: 100%;
+    body.dark-theme & {
+      background: linear-gradient(dark-color-overlay($elvation) 10%, rgba(dark-color-overlay($elvation), 0));
+    }
+  }
 }

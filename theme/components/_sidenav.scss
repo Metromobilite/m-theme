@@ -2,13 +2,13 @@
 @import "../helpers";
 
 .mat-drawer-backdrop.mat-drawer-shown {
-	body.dark-theme & {
-		background: rgba(black, 0.7);
-	}
+  body.dark-theme & {
+    background: rgba(black, 0.7);
+  }
 }
 
 .mat-drawer {
-	body.dark-theme & {
-		background: dark-color-overlay(2);
-	}
+  body.dark-theme & {
+    background: dark-color-overlay(2);
+  }
 }
