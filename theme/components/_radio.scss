@@ -1,0 +1,10 @@
+@import "../variables";
+@import "../helpers";
+
+.m-theme {
+  &.no-labels {
+    .mat-radio-label-content {
+      padding-left: 0;
+    }
+  }
+}

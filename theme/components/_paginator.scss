@@ -1,0 +1,11 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-paginator {
+  body.dark-theme & {
+    background: dark-color-overlay(12);
+  }
+  body.light-theme & {
+    background: map-get($light-theme-background, app-bar);
+  }
+}

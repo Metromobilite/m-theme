@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-table.m-theme {
+  body.dark-theme & {
+    background: dark-color-overlay(1);
+
+    thead {
+      background: dark-color-overlay(12);
+    }
+
+    tbody tr {
+      &:hover,
+      &:focus-within {
+        background: dark-color-overlay(4);
+      }
+    }
+  }
+  body.light-theme & {
+    background: transparent;
+
+    thead {
+      background: light-color-overlay(4);
+    }
+
+    tbody tr {
+      &:hover,
+      &:focus-within {
+        background: light-color-overlay(1);
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: all 250ms ease-in-out;
+    }
+  }
+
+  &,
+  thead,
+  thead > tr {
+    border-top-left-radius: $shape-radius;
+    border-top-right-radius: $shape-radius;
+  }
+
+  thead > tr > th {
+    &:first-of-type {
+      border-top-left-radius: $shape-radius;
+    }
+    &:last-of-type {
+      border-top-right-radius: $shape-radius;
+    }
+  }
+
+  .mat-footer-row .mat-cell {
+    padding: 0;
+  }
+}
+
+.actions-cell {
+  $cellWidth: 40px;
+  width: $cellWidth;
+
+  &.double {
+    width: $cellWidth * 2;
+  }
+}

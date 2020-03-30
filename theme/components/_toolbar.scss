@@ -46,6 +46,10 @@
     background: dark-color-overlay(16);
   }
 
+  body.light-theme & {
+    background: light-color-overlay(16);
+  }
+
   .mat-toolbar-row,
   .m-toolbar-row {
     &.align-end {

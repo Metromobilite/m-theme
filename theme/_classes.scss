@@ -80,6 +80,15 @@
   }
 }
 
+.align-self-end {
+  align-self: flex-end;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 /**
  * Helper classes for icons.
  * Available classes: .m-icon, .[m-]icon[[-very]-large], .m-icon.important

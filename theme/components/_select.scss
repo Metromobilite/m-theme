@@ -1,0 +1,33 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-select-panel {
+  body.dark-theme & {
+    border-radius: $shape-radius;
+
+    background: dark-color-overlay(12);
+
+    .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: dark-color-overlay(8);
+    }
+
+    .mat-option:hover:not(.mat-option-disabled),
+    .mat-option:focus:not(.mat-option-disabled) {
+      background: dark-color-overlay(24);
+    }
+  }
+  body.light-theme & {
+    border-radius: $shape-radius;
+
+    background: light-color-overlay(12);
+
+    .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: light-color-overlay(8);
+    }
+
+    .mat-option:hover:not(.mat-option-disabled),
+    .mat-option:focus:not(.mat-option-disabled) {
+      background: light-color-overlay(24);
+    }
+  }
+}

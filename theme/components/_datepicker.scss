@@ -1,0 +1,8 @@
+@import "../variables";
+@import "../helpers";
+
+.mat-datepicker-content {
+  body.dark-theme & {
+    background: inherit;
+  }
+}
