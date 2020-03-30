@@ -1,0 +1,17 @@
+@import "../variables";
+@import "../helpers";
+
+/********************************************************************************
+ * Override the material design card style.
+ ********************************************************************************/
+
+.mat-card {
+  border-radius: $shape-radius;
+
+  body.dark-theme & {
+    background: dark-color-overlay(4);
+  }
+  body.light-theme & {
+    background: light-color-overlay(1);
+  }
+}
