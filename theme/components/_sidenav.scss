@@ -12,6 +12,6 @@
     background: dark-color-overlay(2);
   }
   body.light-theme & {
-    background: map-get($light-theme-background, status-bar);
+    background: light-color-overlay(0);
   }
 }
