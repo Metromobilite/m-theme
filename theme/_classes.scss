@@ -37,6 +37,16 @@
         }
       }
     }
+    body.light-theme & {
+      background: light-color-overlay($elevation);
+
+      &.mat-list-item {
+        &:focus,
+        &:hover {
+          background: light-color-overlay($elevation);
+        }
+      }
+    }
   }
 }
 
