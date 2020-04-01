@@ -27,7 +27,7 @@
  */
 @each $elevation, $value in $dark-theme-elevation-colors {
   .m-elevation-#{$elevation} {
-    body.dark-theme & {
+    body.dark-theme &:not(.exclude-dark) {
       background: dark-color-overlay($elevation);
 
       &.mat-list-item {
@@ -37,7 +37,7 @@
         }
       }
     }
-    body.light-theme & {
+    body.light-theme &:not(.exclude-light) {
       background: light-color-overlay($elevation);
 
       &.mat-list-item {
