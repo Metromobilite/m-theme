@@ -12,6 +12,6 @@
     background: dark-color-overlay(2);
   }
   body.light-theme & {
-    background: light-color-overlay(0);
+    background: map-get($light-theme-background, background);
   }
 }
