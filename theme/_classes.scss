@@ -17,7 +17,13 @@
   > * {
     &:not(:first-of-type) {
       font-size: $list-item-fz-secondary;
-      opacity: 0.7;
+
+      body.dark-theme & {
+        opacity: 0.7;
+      }
+      body.light-theme & {
+        opacity: 0.87;
+      }
     }
   }
 }

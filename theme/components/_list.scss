@@ -67,8 +67,14 @@
     .sub-line {
       font-size: $list-item-fz-secondary;
       line-height: $list-item-fz-secondary;
-      opacity: 0.7;
       margin-top: $list-spacing / 2;
+
+      body.dark-theme & {
+        opacity: 0.7;
+      }
+      body.light-theme & {
+        opacity: 0.87;
+      }
     }
 
     &.double-action {
