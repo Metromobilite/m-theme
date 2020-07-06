@@ -2,20 +2,24 @@
 @import "../../../../theme/helpers";
 
 :host {
-	.page-content {
-		@include end-background-filter(2);
+  .page-content {
+    @include bottom-picture();
 
-		body.dark-theme & {
-			background: dark-color-overlay(2);
-			@include end-background;
-		}
-	}
+    body.dark-theme & {
+      background: dark-color-overlay(2);
+    }
+    body.light-theme & {
+      background: light-color-overlay(1);
+    }
+  }
 }
 
 .page-content {
-	max-width: 600px;
-	margin: auto;
-	padding: $spacing * 2;
-	padding-bottom: $end-bg-size;
-	position: relative;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+
+  p {
+    padding: $spacing * 2;
+  }
 }

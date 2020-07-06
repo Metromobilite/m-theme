@@ -98,21 +98,33 @@ $dark-theme-elevation-colors: (
 }
 
 @mixin end-background() {
-  background-image: url($assets-path + "/images/end-background.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
+  // Do nothing, should be remove in the futur.
 }
 
-@mixin end-background-filter($elvation) {
+@mixin end-background-filter($elevation) {
+  // Do nothing, should be remove in the futur.
+}
+
+@mixin bottom-picture() {
   &::after {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
     height: $end-bg-size;
-    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     body.dark-theme & {
-      background: linear-gradient(dark-color-overlay($elvation) 10%, rgba(dark-color-overlay($elvation), 0));
+      background-image: url($assets-path + "/images/bottom_picture_metromob_dark/bottom_picture_metromob_dark.png");
+
+      @media only screen and (min-resolution: 200dpi), only screen and (min-width: 1024px) {
+        background-image: url($assets-path + "/images/bottom_picture_metromob_dark/bottom_picture_metromob_dark@2x.png");
+      }
+    }
+    body.light-theme & {
+      background-image: url($assets-path + "/images/bottom_picture_metromob_light/bottom_picture_metromob_light.png");
+
+      @media only screen and (min-resolution: 200dpi), only screen and (min-width: 1024px) {
+        background-image: url($assets-path + "/images/bottom_picture_metromob_light/bottom_picture_metromob_light@2x.png");
+      }
     }
   }
 }
