@@ -6,7 +6,7 @@ body {
   &.light-theme {
     @include angular-material-theme($light-theme);
 
-    background: #fff;
+    background: #eeeeee;
   }
   &.dark-theme {
     @include angular-material-theme($dark-theme);

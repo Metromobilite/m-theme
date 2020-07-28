@@ -122,12 +122,12 @@
     }
 
     .actions {
-      padding: $list-spacing $list-spacing * 2;
       display: flex;
+      padding: $list-spacing $list-spacing * 2 $list-spacing $list-spacing;
 
       > .mat-button {
-        padding: 0;
-        border-radius: $shape-radius;
+        padding: 0 $spacing * 2;
+        border-radius: $button-radius;
       }
 
       > .spacing {

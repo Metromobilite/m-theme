@@ -74,13 +74,17 @@
 
 .light-overlay {
   body.light-theme & {
-    background: map-get($light-theme-background, content);
+    background: map-get($light-theme-background, background);
 
     &.mat-list-item {
       &:focus,
       &:hover {
         background: shade(map-get($light-theme-background, background), 8);
       }
+    }
+
+    &-inner {
+      background: map-get($light-theme-background, content);
     }
   }
 }

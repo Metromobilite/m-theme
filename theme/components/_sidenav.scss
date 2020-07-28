@@ -15,3 +15,9 @@
     background: map-get($light-theme-background, background);
   }
 }
+
+.mat-drawer-container {
+  body.light-theme & {
+    background-color: transparent;
+  }
+}
