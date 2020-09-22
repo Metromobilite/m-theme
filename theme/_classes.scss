@@ -119,6 +119,10 @@
     justify-content: flex-start;
   }
 
+  &.align-start {
+    align-items: flex-start;
+  }
+
   &.no-wrap {
     flex-wrap: nowrap;
   }
