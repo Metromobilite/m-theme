@@ -145,3 +145,27 @@
     }
   }
 }
+
+.m-theme.m-list {
+  &.ghost {
+    padding: $spacing;
+    margin: 0;
+    list-style: none;
+
+    li {
+      height: $list-two-line-height;
+      border-radius: $shape-radius;
+
+      &:not(:first-of-type) {
+        margin-top: $spacing;
+      }
+
+      body.dark-theme & {
+        background: dark-color-overlay(1);
+      }
+      body.light-theme & {
+        background: shade(map-get($light-theme-background, background), 16);
+      }
+    }
+  }
+}
