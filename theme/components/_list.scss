@@ -32,13 +32,28 @@
     }
 
     &,
-    a {
+    a[mat-line],
+    button[mat-line] {
       border: 1px solid transparent;
       transition: border 250ms;
     }
 
+    a[mat-line],
+    button[mat-line] {
+      background: transparent;
+      text-align: left;
+
+      .dark-theme & {
+        color: map-get($dark-theme-foreground, text);
+      }
+      .light-theme & {
+        color: map-get($light-theme-foreground, text);
+      }
+    }
+
     &:focus,
-    a:focus {
+    a[mat-line]:focus,
+    button[mat-line]:focus {
       outline: none;
 
       .dark-theme & {
@@ -91,12 +106,13 @@
         align-items: center;
       }
 
-      a.mat-line {
+      a.mat-line,
+      button.mat-line {
         padding-left: $list-spacing * 2;
         padding-right: 40px + ($list-spacing * 1.5);
       }
 
-      button,
+      button[mat-icon-button],
       a[mat-icon-button] {
         position: absolute;
         top: 50%;
@@ -115,7 +131,8 @@
   &.important {
     .mat-list-item {
       &,
-      a {
+      a[mat-line],
+      button[mat-line] {
         border-radius: $shape-radius;
       }
 
