@@ -118,6 +118,14 @@
 
   &.simple {
     padding-left: $spacing * 4 + 40px;
+
+    &.multiline {
+      padding: 0;
+
+      .m-toolbar-row:nth-child(1) {
+        padding-left: $spacing * 4 + 40px;
+      }
+    }
   }
 
   &.with-mat-tab {
