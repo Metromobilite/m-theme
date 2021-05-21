@@ -1,13 +1,13 @@
 @import "../variables";
 @import "../helpers";
 
-.mat-dialog-container {
+.mat-dialog-container.m-theme {
   body.dark-theme & {
     background: map-get($dark-theme-background, container);
   }
 }
 
-.cdk-overlay-dark-backdrop {
+.cdk-overlay-backdrop.m-theme {
   body.dark-theme & {
     background: rgba(black, 0.7);
   }

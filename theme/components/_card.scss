@@ -5,7 +5,7 @@
  * Override the material design card style.
  ********************************************************************************/
 
-.mat-card {
+.mat-card.m-theme {
   border-radius: $shape-radius;
 
   body.dark-theme & {

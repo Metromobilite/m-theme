@@ -1,8 +1,13 @@
 @import "../variables";
 @import "../helpers";
 
-.mat-menu-panel {
+.mat-menu-panel.m-theme {
   body.dark-theme & {
     background: dark-color-overlay(8);
+  }
+
+  .mat-menu-content:not(:empty) {
+    padding-left: $spacing * 0.5;
+    padding-right: $spacing * 0.5;
   }
 }

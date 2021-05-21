@@ -4,10 +4,10 @@
  * Override the material design button style.
  ********************************************************************************/
 
-.mat-button-base {
+.mat-button-base.m-theme {
   text-transform: uppercase;
 
-  body.dark-theme & {
+  body.dark-theme &:not([color]) {
     color: map-get($dark-theme-foreground, text);
   }
 

@@ -1,7 +1,7 @@
 @import "../variables";
 @import "../helpers";
 
-.mat-paginator {
+.mat-paginator.m-theme {
   body.dark-theme & {
     background: dark-color-overlay(12);
   }

@@ -123,6 +123,10 @@
     align-items: flex-start;
   }
 
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
   &.no-wrap {
     flex-wrap: nowrap;
   }
@@ -224,5 +228,88 @@
 @supports (margin: max(0px)) {
   .spacing-iphone-X {
     margin-left: max(var($spacing), env(safe-area-inset-left)) !important;
+  }
+}
+
+.margin {
+  &--right {
+    margin-right: $spacing * 2 !important;
+  }
+  &--left {
+    margin-left: $spacing * 2 !important;
+  }
+  &--bottom {
+    margin-bottom: $spacing !important;
+
+    &---small {
+      margin-bottom: $spacing / 2 !important;
+    }
+    &---big {
+      margin-bottom: $spacing * 2 !important;
+    }
+  }
+}
+
+.padding {
+  @mixin padding($t: $spacing, $r: $spacing, $b: $spacing, $l: $spacing) {
+    &---spacing {
+      padding: $t $r $b $l;
+    }
+    &---spacing-2 {
+      padding: $t * 2 $r * 2 $b * 2 $l * 2;
+    }
+    &---spacing-small {
+      padding: $t * 0.5 $r * 0.5 $b * 0.5 $l * 0.5;
+    }
+  }
+
+  &--top {
+    @include padding($spacing, 0, 0, 0);
+  }
+  &--bottom {
+    @include padding(0, 0, $spacing, 0);
+  }
+  &--left {
+    @include padding(0, 0, 0, $spacing);
+  }
+  &--right {
+    @include padding(0, $spacing, 0, 0);
+  }
+  &--all {
+    @include padding();
+  }
+  &--tb {
+    @include padding($spacing, 0, $spacing, 0);
+  }
+  &--lr {
+    @include padding(0, $spacing, 0, $spacing);
+  }
+}
+
+.m-fz-small {
+  font-size: $default-fz-small !important;
+  line-height: $default-fz-small !important;
+}
+
+.dark-only {
+  body:not(.dark-theme) & {
+    display: none;
+  }
+}
+
+.light-only {
+  body:not(.light-theme) & {
+    display: none;
+  }
+}
+
+.text-secondary {
+  body.dark-theme & {
+    color: map-get($dark-theme-foreground, text);
+    opacity: 0.7;
+  }
+  body.light-theme & {
+    color: map-get($light-theme-foreground, text);
+    opacity: 0.87;
   }
 }

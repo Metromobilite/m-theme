@@ -14,7 +14,10 @@ export class DialogPageComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(DemoDialogComponent);
+    this.dialog.open(DemoDialogComponent, {
+      backdropClass: 'm-theme',
+      panelClass: 'm-theme',
+    });
   }
 
 }
