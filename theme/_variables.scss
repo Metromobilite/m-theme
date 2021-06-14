@@ -10,7 +10,8 @@ $mat-light-theme-background: (
   background: white,
   content: #eeeeee,
   hover: rgba(black, 0.04),
-  card: white,
+  // TODO: Temporarly comment the card bg color to fix pm nav layout style issues
+  // card: white,
   dialog: white,
   disabled-button: rgba(black, 0.12),
   raised-button: white,
@@ -47,7 +48,8 @@ $mat-dark-theme-background: (
   app-bar: #16111a,
   background: #16111a,
   hover: rgba(white, 0.04),
-  card: map_get($mat-grey, 800),
+  // TODO: Temporarly comment the card bg color to fix pm nav layout style issues
+  // card: map_get($mat-grey, 800),
   dialog: map_get($mat-grey, 800),
   disabled-button: rgba(white, 0.12),
   raised-button: map-get($mat-grey, 800),

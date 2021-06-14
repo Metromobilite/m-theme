@@ -17,6 +17,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -63,6 +64,7 @@ import { BackgroundPageComponent } from './pages/background-page/background-page
     MatTreeModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
